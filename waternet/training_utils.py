@@ -57,8 +57,8 @@ class UIEBDataset(torch.utils.data.Dataset):
         """
         legacy=True to replicate the paper's parameters
         """
-        raw_im_fns = sorted([i.name for i in Path(raw_dir).glob("*.png")])
-        ref_im_fns = sorted([i.name for i in Path(ref_dir).glob("*.png")])
+        raw_im_fns = sorted([i.name for i in Path(raw_dir).glob("*.jpg")])
+        ref_im_fns = sorted([i.name for i in Path(ref_dir).glob("*.jpg")])
 
         assert set(raw_im_fns) == set(ref_im_fns)
 

@@ -167,7 +167,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--batch-size",
         type=int,
-        default=16,
+        default=4,
         help="(Optional) Batch size, defaults to 16",
     )
     parser.add_argument(
@@ -230,7 +230,7 @@ if __name__ == "__main__":
         im_height=im_height,
         im_width=im_width,
     )
-    train_dataset, val_dataset = torch.utils.data.random_split(dataset, [800, 90])
+    train_dataset, val_dataset = torch.utils.data.random_split(dataset, [690, 300])
     train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size)
     val_dataloader = torch.utils.data.DataLoader(val_dataset, batch_size=batch_size)
 
